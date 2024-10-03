@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tanulo\\Git\\ProductApi\\ProductApi\\ProductApi.csproj": {}
+    "C:\\Users\\bales\\source\\repos\\ProductAPI\\ProductApi\\ProductApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tanulo\\Git\\ProductApi\\ProductApi\\ProductApi.csproj": {
+    "C:\\Users\\bales\\source\\repos\\ProductAPI\\ProductApi\\ProductApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tanulo\\Git\\ProductApi\\ProductApi\\ProductApi.csproj",
+        "projectUniqueName": "C:\\Users\\bales\\source\\repos\\ProductAPI\\ProductApi\\ProductApi.csproj",
         "projectName": "ProductApi",
-        "projectPath": "C:\\Users\\Tanulo\\Git\\ProductApi\\ProductApi\\ProductApi.csproj",
-        "packagesPath": "C:\\Users\\Tanulo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tanulo\\Git\\ProductApi\\ProductApi\\obj\\",
+        "projectPath": "C:\\Users\\bales\\source\\repos\\ProductAPI\\ProductApi\\ProductApi.csproj",
+        "packagesPath": "C:\\Users\\bales\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\bales\\source\\repos\\ProductAPI\\ProductApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Tanulo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\bales\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
