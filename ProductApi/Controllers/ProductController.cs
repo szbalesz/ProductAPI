@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using ProductApi.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ProductApi.Controllers
 {
@@ -52,6 +53,25 @@ namespace ProductApi.Controllers
                 Id = Id,
                 Name = Name,
                 Price = Price,
+                CreatedTime = DateTime.Now
+            };
+            return result;
+        }
+        [HttpPut]
+        public Product Put(Guid Id,string NewName,int NewPrice)
+        {
+            conn.Connection.Open();
+            DateTime CreatedTime = DateTime.Now;
+            //(`Id`, `Name`, `Price`, `CreatedTime`) VALUES ('{Id}','{Name}',{Price},'{CreatedTime.ToString("yyyy-MM-dd HH:mm:ss")}')";
+            string sql = $"UPDATE `products` SET `Name`='{NewName}', `Price` = {NewPrice} WHERE `Id` = '{Id}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.ExecuteNonQuery();
+            conn.Connection.Close();
+            var result = new Product
+            {
+                Id = Id,
+                Name = NewName,
+                Price = NewPrice,
                 CreatedTime = DateTime.Now
             };
             return result;
