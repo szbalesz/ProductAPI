@@ -62,7 +62,6 @@ namespace ProductApi.Controllers
         {
             conn.Connection.Open();
             DateTime CreatedTime = DateTime.Now;
-            //(`Id`, `Name`, `Price`, `CreatedTime`) VALUES ('{Id}','{Name}',{Price},'{CreatedTime.ToString("yyyy-MM-dd HH:mm:ss")}')";
             string sql = $"UPDATE `products` SET `Name`='{NewName}', `Price` = {NewPrice} WHERE `Id` = '{Id}'";
             MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
             cmd.ExecuteNonQuery();
@@ -75,6 +74,17 @@ namespace ProductApi.Controllers
                 CreatedTime = DateTime.Now
             };
             return result;
+        }
+        [HttpDelete]
+        public string Delete(Guid Id)
+        {
+            conn.Connection.Open();
+            DateTime CreatedTime = DateTime.Now;
+            string sql = $"DELETE FROM `products` WHERE `Id` = '{Id}'";
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.ExecuteNonQuery();
+            conn.Connection.Close();
+            return $"{Id} elem törölve.";
         }
     }
 }
